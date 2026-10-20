@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #101827;
+  color: #f4f4f8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar {
+  background: #172235;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #a78bfa;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a:hover {
+  color: #a78bfa;
+}
+
+header{
+  display: flex;
+}
+.hero {
+  min-height: 80vh;
+  padding: 100px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 65px);
+  color: #a78bfa;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 600px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #c2cada;
+}
+
+.btn {
+  display: inline-block;
+  background: #a78bfa;
+  color: #17132a;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 7px;
+  margin-top: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #c4b5fd;
+}
+
+.section {
+  padding: 75px 8%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #a78bfa;
+}
+
+.about p,
+.resume p {
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.9;
+  color: #c2cada;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 80px 8%;
+  background: #0f0b1d;
+  color: #ffffff;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  color: #c4b5fd;
+  margin-bottom: 45px;
+  font-weight: 700;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* Project Card */
+.project-card {
+  background: #1c1630;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 18px;
+  overflow: hidden;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(167, 139, 250, 0.15);
+  border-color: #a78bfa;
+}
+
+/* Project Image */
+.project-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Project Title */
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #c4b5fd;
+  margin: 22px 20px 10px;
+}
+
+/* Project Description */
+.project-card p {
+  color: #d1cbdc;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 20px 22px;
+  flex-grow: 1;
+}
+
+/* Project Buttons */
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+.project-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 16px;
+  background: #a78bfa;
+  color: #171329;
+  text-decoration: none;
+  border: 1px solid #a78bfa;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+  background: #c4b5fd;
+  border-color: #c4b5fd;
+  transform: translateY(-2px);
+}
+
+/* GitHub Button */
+.github-btn {
+  background: transparent;
+  color: #c4b5fd;
+}
+
+.github-btn:hover {
+  background: #a78bfa;
+  color: #171329;
+}
+
+/* Keyboard Accessibility */
+.project-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .projects-section {
+    padding: 65px 5%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .projects-section {
+    padding: 50px 6%;
+  }
+
+  .projects-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .project-card img {
+    height: 220px;
+  }
+
+  .project-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .project-links {
+    gap: 10px;
+  }
+
+  .project-btn {
+    padding: 10px 14px;
+  }
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill {
+  padding: 12px 20px;
+  background: #172235;
+  border: 1px solid #39445b;
+  border-radius: 8px;
+}
+
+.resume {
+  background: #131e30;
+}
+
+.contact-form {
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  background: #172235;
+  color: white;
+  border: 1px solid #39445b;
+  border-radius: 7px;
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  align-self: center;
+}
+
+.contact-form p,
+#contact > p {
+  margin-top: 15px;
+}
+
+footer {
+  padding: 22px;
+  text-align: center;
+  background: #172235;
+  color: #c2cada;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 18px 5%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .hero {
+    min-height: 65vh;
+    padding: 70px 6%;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 55px 6%;
+  }
+
+  .hero h2 {
+    font-size: 23px;
+  }
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.hero-image img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #a78bfa;
+  box-shadow: 0 0 25px rgba(167, 139, 250, 0.3);
+}
+
+@media (max-width: 520px) {
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
